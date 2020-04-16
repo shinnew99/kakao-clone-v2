@@ -29,6 +29,7 @@
 
 .friend__content .friend__name{
     display: block;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
@@ -38,12 +39,41 @@
     opacity: 0.6;
 }
 
+
 .friends__content .friend__bottom-text{
     font-size: 14px;
 }
+
 
 .friend .chat__timestamp
 .friends .chat__timestamp{
     font-size: 12px;
 }
 
+
+.friend .froend__now-listening{
+    border: 2px solid #52e084;
+    padding:5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+
+.friend__now-listening span {
+    opacity: 0.7;
+}
+
+
+.friend__now-listening i{
+    font-size: 12px;
+}
+
+.friend__add-btn{
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
