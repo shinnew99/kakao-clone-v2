@@ -13,7 +13,6 @@
 .chats-body{
     padding:10px 0px;
     padding-top: 100px;
-    min-height: 100000px;
 } 
 
 .chats-body .header,
@@ -29,14 +28,12 @@
 .chat__write--container{
     position: fixed;
     bottom: 0px;
-    margin: 0 auto;
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0px 20px;
 }
 
 .chat__icon-left{
@@ -56,7 +53,7 @@
         0 -12px 36px -8px rgba(0, 0, 0, 0.025); 
     }
     50%{
-        box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+        box-shadow: 0 30px 60px -60px rgba(50, 50, 93, 0.25),
         0 18px 36px -18px rgba(0, 0, 0, 0.3), 
         0 -12px 36px -8px rgba(0, 0, 0, 0.025); 
     }100%{
@@ -82,7 +79,6 @@
 .chat__write:focus{
     outline: none;
     width: 80%;
-    margin: 0 auto;
     transform: translateY(-100px);
     border-radius: 40px;
     box-shadow:  0 30px 60px -12px rgba(50, 50, 93, 0.25),
@@ -107,30 +103,19 @@
     width: 80%;
 }   
 
-.chat__write-column input{
-    padding: 20px 10px;
-    width: 100%;
-    border: none;
-    font-size: 14px;
-}
-
-.chat__write-column input:focus{
-    outline: none;
-}
-
 .chat-screen .chat__messages{
     border-top: 1px solid #f7f7f7;
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    flex-direction : column;
     align-items: center;
     justify-content: center;
     padding: 0px 20px;
-    padding-top:30px;
+    padding-top: 30px;
 }
 
 .chat__messages .chat__timestamp{
-    background-color:white;
-    font-size:14px;
+    background-color: white;
+    font-size: 12px;
     padding: 5px 10px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -146,10 +131,6 @@
     margin-bottom: 20px;
 }
 
-.message .message__content{
-    width: 80%
-}
-
 .incoming-message{
     align-self: flex-start;
 }
@@ -157,6 +138,7 @@
 .sent-message{
     align-self: flex-end;
 }
+
 
 
 @keyframes spin{
@@ -167,12 +149,11 @@
     }
 }
 
-
 .incoming-message img{
     width: 30px;
     border-radius: 15px;
     margin-right: 15px;
-    box-shadow: rgba(50, 50, 93, 0.25), 0px 13px 27px -5px,
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
         rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
     animation: spin 1s linear infinite;
@@ -181,7 +162,7 @@
 .message .message__bubble{
     background-color: white;
     display: block;
-    box-shadow: rgba(50, 50, 93, 0.25), 0px 13px 27px -5px,
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
         rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
     padding: 10px 20px;
@@ -203,14 +184,8 @@
 }
 
 .sent-message .message__bubble{
-    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     background-image: linear-gradient(to left, #00c6ff, #0072ff);
-}
-
-.incoming-message{
-  animation: incomingAnimation 1s linear forwards{
-
-  }
 }
 
 @keyframes incomingAnim{
@@ -218,7 +193,7 @@
         opacity: 0;
         transform: translateX(-200px);
     }to{
-        opacity:1
+        opacity:1;
         transform: none;
     }
 }
@@ -232,11 +207,10 @@
         opacity: 0;
         transform: translateX(200px);
     }to{
-        opacity:1
+        opacity:1;
         transform: none;
     }
 }
-
 
 .sent-message{
     animation: sentAnimation 0.5s ease-out forwards;
